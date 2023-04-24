@@ -80,6 +80,7 @@
     align-items: center;
     box-sizing: border-box;
     margin: 32px;
+    flex-wrap: wrap;
 }
 
 .quiz__step-title {
@@ -198,11 +199,11 @@
 .quiz__button-next {
     background: #383838;
     color: #FFFFFF;
-    margin-left: auto;
+    margin-right: 30px;
 }
 
 .quiz__button-prev {
     background: #FFFFFF;
     color: #383838;
-    margin-left: 55px;
+    margin-left: 30px;
 }
