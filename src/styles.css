@@ -1,5 +1,7 @@
 @import url(./assets/reset.css);
 
+/* Подключение шрифтов */
+
 @font-face {
     font-family: "Onest";
     src: url("./assets/fonts/Onest-Medium.woff2") format("woff2"),
@@ -18,8 +20,29 @@
     font-display: swap;
 }
 
-p{
-    font-family: Onest;
+
+
+.quiz {
+    background-color: #CAFFA0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.quiz__title {
+    font-family: 'Onest';
+    font-weight: 500;
+    font-style: normal;
+    font-size: 60px;
+    color: #383838;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-top: 32px;
+    margin-left: 32px;
+}
+
+.quiz__subtitle {
+    font-family: 'Onest';
     font-weight: 400;
     font-style: normal;
     font-size: 18px;
@@ -29,25 +52,7 @@ p{
     margin-left: 32px;
 }
 
-h1 {
-    font-family: Onest;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 60px;
-    color: #383838;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    margin-top: 32px;
-    margin-left: 32px;
-}
-.quiz__container {
-    background-color: #CAFFA0;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: space-between;
-}
-
-img {
+.quiz__image {
     display: block;
     width: 700px;
     height: 500px;
@@ -56,12 +61,148 @@ img {
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
-form {
-    width: 776px;
-    height: 592px;
-    left: 608px;
-    top: 32px;
+/* Стилизация формы */
+
+.quiz__content {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.quiz__form {
+    width: 676px;
+    height: 492px;
     background: #FFFFFF;
     border-radius: 24px;
-    margin: 100px 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    margin: 32px;
+}
+
+.quiz__step-title {
+    font-family: 'Onest';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    color: #383838;
+    display: flex;
+    justify-content: space-between;
+    padding: 32px;
+}
+
+.quiz__step-subtitle {
+    font-family: 'Onest';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    color: #9B9B9B;
+}
+
+.quiz__step-label {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px;
+    margin: 8px;
+    width: 252px;
+    height: 56px;
+    background: #F5F5F5;
+    border-radius: 16px;
+    font-family: 'Onest';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #383838;
+}
+
+/* Стилизация радиокнопки */
+/* Начало */
+
+.custom-radio {
+    display: inline-block;
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    font-size: 14px;
+    user-select: none;
+}
+
+.custom-radio input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkmark {
+    position: absolute;
+    top: 15px;
+    left: 210px;
+    height: 20px;
+    width: 20px;
+    background-color: #F5F5F5;
+    border-radius: 50%;
+    border: 1px solid #D8D8D8;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.custom-radio input:checked ~ .checkmark {
+    background-color: #FFFFFF;
+    border: 7px solid #000000;
+    box-sizing:border-box
+}
+
+/* Конец */
+
+.active {
+    background: #FFFFFF;
+    border: 1px solid #383838;
+
+}
+
+.quiz__step-form {
+    margin: 24px 0px 54px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Стилизация кнопки  */
+
+.quiz-controls {
+    padding: 12px 20px;
+    width: 575px;
+    background: #FFFFFF;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+}
+
+.quiz__button {
+    padding: 12px 20px;
+    width: 108px;
+    height: 44px;
+    border-radius: 12px;
+    font-family: 'Onest';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.quiz__button-next {
+    background: #383838;
+    color: #FFFFFF;
+    margin-left: auto;
+}
+
+.quiz__button-prev {
+    background: #FFFFFF;
+    color: #383838;
+    margin-left: 55px;
 }
